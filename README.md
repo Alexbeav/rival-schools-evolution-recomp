@@ -47,6 +47,20 @@ shares the portable toolchain used by per-title launchers, and automates
 BIOS/ROM/save plumbing so you are not stuck repeating each game’s wizard by hand.
 <!-- /retcomm-readme-launcher -->
 
+## Two discs, two kits
+
+Rival Schools: United by Fate (USA) ships on two discs that are two separate
+programs. This kit is the **Evolution Disc** (disc 2, SLUS-00771). The **arcade disc** (disc 1, slus-00681) is its own kit:
+[Rival Schools: United by Fate](https://github.com/Alexbeav/rival-schools-recomp). Install the
+one you want to play; you need both kits (and both discs) for the full game.
+
+Known limitation: on the original console the Evolution Disc reads the Arcade
+Disc's save. Each kit keeps its own `saves/` folder, so that carry-over does
+not happen by itself. Pointing both kits at one memory-card folder
+(`memcard_dir` in each kit's `game.toml`) should make the shared save visible
+to both programs, but this has not been tested on the recompiled builds yet.
+If you try it, report the result in a GitHub issue.
+
 ## Diagnostic mode
 
 If the game crashes, freezes, or misbehaves, switch to the diagnostic build
