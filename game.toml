@@ -1,0 +1,56 @@
+# Autofilled by tools/new_project_layout/probe_disc.py from your legal dump.
+# Review before shipping. Runtime quirks / overlay seeds still need hand work.
+
+[game]
+name = "Rival Schools: Evolution Disc"
+id = "SLUS-00771"
+players = 2
+exe = "disc/SLUS_007.71"
+disc = "disc/Rival Schools - United by Fate (USA) (Disc 2) (Evolution Disc).cue"
+load_address = "0x80010000"
+entry_pc = "0x80010008"
+text_size = "0x00089000"
+stack_base = "0x801FFFF0"
+
+# Digests are for data Track 01 (first BINARY FILE / TRACK 01).
+[prepare_disc]
+out_dir = "disc"
+bin_name = "Rival Schools - United by Fate (USA) (Disc 2) (Evolution Disc).bin"
+cue_name = "Rival Schools - United by Fate (USA) (Disc 2) (Evolution Disc).cue"
+boot_exe = "SLUS_007.71"
+known_sizes = [385655088]
+known_md5 = [
+  "a7af7e5b80c23fdd08db6b629399dfd7",
+]
+known_sha1 = [
+  "2bf1af92ed996ebd4d624046496d21567aac39f0",
+]
+known_crc32 = [
+  "a1134215",
+]
+
+[recompiler]
+bios_config = "psxrecomp/bios/SCPH1001.toml"
+seeds = "seeds/ghidra_funcs.txt"
+out_dir = "generated"
+strict = true
+
+[runtime]
+openbios = false
+window_title = "Rival Schools: Evolution Disc Recompiled"
+memcard_dir = "saves"
+overlay_cache = true
+
+[video]
+renderer = "opengl"
+aspect_ratio = "4:3"
+
+[controller]
+default_mode = "digital"
+
+# Online mount gate: digests + track count + optional TOC fingerprint
+# (see docs/NETPLAY.md).
+[netplay]
+require_cue = true
+required_tracks = 1
+required_disc_fp = "faf365dd834a5e887192d9b38998697dd89355e959e6633b312a2bf9586de0d3"

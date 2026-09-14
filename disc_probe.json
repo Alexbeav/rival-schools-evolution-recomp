@@ -1,0 +1,31 @@
+{
+  "cue_path": "I:\\Projects\\PSX-Ports-pilot\\_disc\\rival-schools-evolution\\Rival Schools - United by Fate (USA) (Disc 2) (Evolution Disc).cue",
+  "cue_name": "Rival Schools - United by Fate (USA) (Disc 2) (Evolution Disc).cue",
+  "bin_name": "Rival Schools - United by Fate (USA) (Disc 2) (Evolution Disc).bin",
+  "track_count": 1,
+  "data_track_size": 385655088,
+  "data_track_md5": "a7af7e5b80c23fdd08db6b629399dfd7",
+  "data_track_sha1": "2bf1af92ed996ebd4d624046496d21567aac39f0",
+  "data_track_crc32": "a1134215",
+  "boot_exe": "SLUS_007.71",
+  "serial": "SLUS-00771",
+  "serial_exe": "SLUS_007.71",
+  "volume_id": "SLUS_00771",
+  "display_name": "Rival Schools: Evolution Disc",
+  "load_address": "0x80010000",
+  "entry_pc": "0x80010008",
+  "text_size": "0x00089000",
+  "stack_base": "0x801FFFF0",
+  "require_cue": true,
+  "required_disc_fp": "faf365dd834a5e887192d9b38998697dd89355e959e6633b312a2bf9586de0d3",
+  "boot_exe_sha256": "fbc243ded05baa0b2d7b761cda498451a9dad2ea42cc58d192049d3dd5a04426",
+  "seed_count": 1248,
+  "warnings": [
+    "cue has only 1 TRACK \u2014 Track-01-only dumps fail multi-track netplay/catalog gates; prefer a full Redump cue."
+  ],
+  "notes": [
+    "entry_pc/load_address/text_size/stack_base taken from PS-X EXE header.",
+    "seeds are first-pass boot-EXE JAL targets (+ entry); expect to grow as overlays / runtime paths are discovered.",
+    "required_disc_fp is psxrecomp-toc-v1 (matches runtime DiscIdentity)."
+  ]
+}
